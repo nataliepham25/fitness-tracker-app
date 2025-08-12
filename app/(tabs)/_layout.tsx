@@ -1,9 +1,8 @@
-import React from 'react';
 import { Tabs } from 'expo-router';
-import { Text, View, StyleSheet } from 'react-native';
-import { Colors } from '../../../src/constants/Colors';
-import { Layout } from '../../../src/constants/Layout';
-import CustomTabBar from '../../../src/components/CustomTabBar';
+import React from 'react';
+import { Text } from 'react-native';
+import { Colors } from '../../constants/Colors';
+import CustomTabBar from '../../src/components/CustomTabBar';
 
 export default function TabLayout() {
   return (

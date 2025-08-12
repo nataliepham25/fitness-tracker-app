@@ -23,7 +23,7 @@ interface UserState {
 
 const initialState: UserState = {
   profile: {
-    name: 'Alex',
+    name: 'Natalie',
     subtitle: 'Fitness Enthusiast',
   },
   preferences: {

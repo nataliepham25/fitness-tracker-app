@@ -1,8 +1,8 @@
 
 import React from 'react';
 import { TouchableOpacity, Text, StyleSheet, StyleProp, ViewStyle, TextStyle } from 'react-native';
-import { Colors } from '../constants/Colors';
-import { Layout } from '../constants/Layout';
+import { Colors } from '@/constants/Colors';
+import { Layout } from '@/constants/Layout';
 
 interface ButtonProps {
   title: string;

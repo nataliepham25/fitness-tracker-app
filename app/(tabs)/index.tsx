@@ -1,10 +1,8 @@
 
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-// import * as Colors from '../../../src/constants/Colors'; // Commented out for absolute path test
-import { Colors } from '../../../src/constants/Colors'; // Absolute path test
+import { StyleSheet, Text, View } from 'react-native';
 
-console.log('Colors imported:', Colors);
+import { Colors } from '../../constants/Colors';
 
 const HomeScreen = () => {
   return (

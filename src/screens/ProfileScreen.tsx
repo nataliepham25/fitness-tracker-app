@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { useSelector } from 'react-redux';
 import { RootState } from '../store/store';
-import { Colors } from '../constants/Colors';
+import { Colors } from '@/constants/Colors';
 
 const ProfileScreen = () => {
   const { profile } = useSelector((state: RootState) => state.user);

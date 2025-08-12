@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { RootState } from '../store/store';
 import BarChart from '../components/BarChart';
 import StatCard from '../components/StatCard';
-import { Colors } from '../constants/Colors';
+import { Colors } from '@/constants/Colors';
 
 const StatsScreen = () => {
   const { monthlyWeightChange, daysActive, avgProtein, workoutsThisMonth, goalRate } = useSelector(
@@ -17,7 +17,7 @@ const StatsScreen = () => {
         <Text style={styles.metric}>{`${monthlyWeightChange} kg`}</Text>
         <Text style={styles.subtitle}>This Month</Text>
       </View>
-      <BarChart />
+      <BarChart data={[0.6, 0.4, 0.8, 0.65, 0.9, 0.75, 0.95]} />
       <View style={styles.statsGrid}>
         <StatCard label="Days Active" value={daysActive.toString()} />
         <StatCard label="Avg Protein" value={avgProtein.toString()} />

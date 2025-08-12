@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 import { useDispatch } from 'react-redux';
 import { addWater } from '../store/nutritionSlice';
-import { Colors } from '../constants/Colors';
+import { Colors } from '@/constants/Colors';
 
 interface WaterEntryFormProps {
   onClose: () => void;

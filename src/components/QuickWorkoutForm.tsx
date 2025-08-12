@@ -4,7 +4,7 @@ import { View, Text, TouchableOpacity, StyleSheet, FlatList } from 'react-native
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../store/store';
 import { startWorkout, completeExercise, finishWorkout } from '../store/workoutsSlice';
-import { Colors } from '../constants/Colors';
+import { Colors } from '@/constants/Colors';
 
 interface QuickWorkoutFormProps {
   onClose: () => void;

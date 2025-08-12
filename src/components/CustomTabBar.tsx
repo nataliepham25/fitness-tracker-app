@@ -2,8 +2,8 @@ import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
 import React, { useState } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { Colors } from '../constants/Colors';
-import { Layout } from '../constants/Layout';
+import { Colors } from '@/constants/Colors';
+import { Layout } from '@/constants/Layout';
 import AddEntryModal from './AddEntryModal';
 
 const CustomTabBar: React.FC<BottomTabBarProps> = ({ state, descriptors, navigation }) => {
@@ -46,11 +46,6 @@ const CustomTabBar: React.FC<BottomTabBarProps> = ({ state, descriptors, navigat
               target: route.key,
             });
           };
-
-          // Skip rendering a tab item for the middle slot if it's meant for the add button
-          if (index === Math.floor(state.routes.length / 2)) {
-            return <View key={route.key} style={styles.navItemPlaceholder} />;
-          }
 
           return (
             <TouchableOpacity
@@ -115,10 +110,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingVertical: Layout.spacing.sm,
-  },
-  navItemPlaceholder: {
-    width: 56, // Width of the add button
-    height: '100%', // Take up full height
   },
   navLabel: {
     fontSize: 12,

@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '../store/store';
 import { completeExercise } from '../store/workoutsSlice';
 import ExerciseItem from '../components/ExerciseItem';
-import { Colors } from '../constants/Colors';
+import { Colors } from '@/constants/Colors';
 
 const WorkoutsScreen = () => {
   const dispatch = useDispatch();

@@ -2,8 +2,8 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import Card from './Card';
-import { Colors } from '../constants/Colors';
-import { Layout } from '../constants/Layout';
+import { Colors } from '@/constants/Colors';
+import { Layout } from '@/constants/Layout';
 
 interface StatCardProps {
   number: string;

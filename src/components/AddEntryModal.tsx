@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, Modal, TouchableOpacity } from 'react-native';
-import { Colors } from '../constants/Colors';
+import { Colors } from '@/constants/Colors';
 import ProteinEntryForm from './ProteinEntryForm';
 import WaterEntryForm from './WaterEntryForm';
 import QuickWorkoutForm from './QuickWorkoutForm';

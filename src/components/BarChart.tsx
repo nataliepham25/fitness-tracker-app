@@ -1,14 +1,18 @@
-
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { Svg, Rect, Defs, LinearGradient, Stop } from 'react-native-svg';
-import { Colors } from '../constants/Colors';
+import { Colors } from '@/constants/Colors';
 
-const barHeights = [0.6, 0.4, 0.8, 0.65, 0.9, 0.75, 0.95];
-const barWidth = 20;
-const chartHeight = 200;
+interface BarChartProps {
+  data: number[];
+}
 
-const BarChart = () => {
+const BarChart: React.FC<BarChartProps> = ({ data }) => {
+  const chartHeight = 200;
+  const barWidth = 20;
+  const spacing = 15; // Space between bars
+  const totalBarWidth = data.length * barWidth + (data.length - 1) * spacing;
+
   return (
     <View style={styles.container}>
       <Svg height={chartHeight} width="100%">
@@ -18,13 +22,13 @@ const BarChart = () => {
             <Stop offset="1" stopColor="#666" stopOpacity="1" />
           </LinearGradient>
         </Defs>
-        {barHeights.map((height, index) => (
+        {data.map((value, index) => (
           <Rect
             key={index}
-            x={(barWidth + 15) * index}
-            y={chartHeight - chartHeight * height}
+            x={index * (barWidth + spacing)}
+            y={chartHeight - chartHeight * value}
             width={barWidth}
-            height={chartHeight * height}
+            height={chartHeight * value}
             fill="url(#grad)"
             rx={4}
             ry={4}
@@ -41,7 +45,7 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     padding: 20,
     marginBottom: 30,
-    height: chartHeight,
+    height: 200,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,

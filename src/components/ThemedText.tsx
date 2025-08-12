@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Text, StyleSheet, StyleProp, TextStyle } from 'react-native';
-import { Colors } from '../constants/Colors';
+import { Colors } from '@/constants/Colors';
 
 interface ThemedTextProps {
   children: React.ReactNode;
