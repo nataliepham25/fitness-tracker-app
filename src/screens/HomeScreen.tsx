@@ -1,10 +1,7 @@
 
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-// import * as Colors from '../../../src/constants/Colors'; // Commented out for absolute path test
-import { Colors } from '../../../src/constants/Colors'; // Absolute path test
-
-console.log('Colors imported:', Colors);
+import { Colors } from '../constants/Colors';
 
 const HomeScreen = () => {
   return (
@@ -20,7 +17,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: Colors.background,
+    backgroundColor: Colors.backgroundBeige,
   },
   title: {
     fontSize: 24,
